@@ -10,11 +10,12 @@ html, body {
 	background: no-repeat center fixed; 
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover; /* version standardisée */
+    scroll-behavior: smooth;
 	
 }
 
 #hello_world b{
-color:#D03900;
+ text-transform:uppercase;
 }
 
 
@@ -29,11 +30,86 @@ a {
 	color:black;
 	text-decoration:none; 
 }
+span{
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 88%;
+  
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+ }
+span:hover {
+    background-size: 100% 0.2em;
+ }
+  
 
 
 /* Affichage Desktop */
 
 @media (min-width: 1250px) {
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.grid-container { height: 800px; padding-top: 50px;padding-bottom:300px;  width: 1000px; margin-left: auto;
+    margin-right: auto;}
+
+.grid-container * { 
+ position: relative;
+ margin:8px;
+}
+.grid-container h1{
+	font-size: 70px;
+}
+.grid-container p{
+	font-size: 19px;
+}
+
+
+.grid-container *:after { 
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "nom_prenom nom_prenom infos Experiences_professionnelles" "formations Realisations Realisations Experiences_professionnelles" "langages logiciels interets interets";
+}
+
+.nom_prenom { grid-area: nom_prenom; }
+
+.infos { grid-area: infos; }
+
+.formations { grid-area: formations; }
+
+.Realisations { grid-area: Realisations; }
+
+.langages { grid-area: langages; }
+
+.logiciels { grid-area: logiciels; }
+
+.interets { grid-area: interets; }
+
+.Experiences_professionnelles { grid-area: Experiences_professionnelles; }
+
+
+.body_one{
+	background: url(../img/background_1.png);
+	background-position: center top;
+    background-size: cover; /* version standardisée */
+}
 
 .onglet{
 	color:#FFC300;
@@ -43,7 +119,7 @@ a {
 	height : 50px;
 	position:fixed;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.75);
+	background-color: rgba(255, 255, 255, 1);
 	margin: 0;
 	padding: 0;
 	opacity: 1;
@@ -51,18 +127,14 @@ a {
 	transition-property: background-color;
 }
 
-#header:hover{
-	-webkit-transition: height 1s; /* Safari */
-	transition: height 1s;
-	opacity: 1;
-	background-color: rgba(255, 255, 255, 1);
-	transition-property: background-color;
-}
+
 
 #content{
 	background-color : rgba(255,255,255,0.75);
 	opacity : 1;
 	position:static;
+	padding-top:50px;
+	padding-bottom:50px;
 	max-width: 1000px;
 	margin-left: auto;
     margin-right: auto ;
@@ -73,7 +145,7 @@ a {
 }
 
 #content h1{
-padding:20px;
+padding-left:20px;
 font-size:30px;
 }
 
@@ -166,12 +238,14 @@ nav li{
 #hello_world h1{
 	font-size:50px;
 	text-shadow: white 1px 0 10px;
+
 }
 
 #hello_world h2{
 	font-size:30px;
 	color:black;
 	text-shadow: white 1px 0 10px;
+	margin-bottom: 40vh;
 }
 
 .footer {
@@ -180,19 +254,12 @@ nav li{
   bottom: 0;
   width: 100%;
   background-color: red;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 1);
   height : 50px;
   z-index: 2;
   transition-property: background-color;
 }
 
-.footer:hover {
--webkit-transition: height 1s; /* Safari */
-	transition: height 1s;
-	opacity: 1;
-	background-color: rgba(255, 255, 255, 1);
-	transition-property: background-color;
-}
 
 #contenu_fin p{
 	padding-left: 10px;
@@ -204,7 +271,7 @@ nav li{
 }
 #contenu_fin img{
 	float:right;
-	height:30px;
+	height:50px;
 }
 fieldset{
 border:none;
@@ -221,6 +288,13 @@ padding-top:60px;
 
 /* Affichage Mobile */
 @media (max-width: 1250px) {
+
+.body_one{
+
+	background: url(../img/background_1.png);
+	background-position: center top;
+    background-size: auto 100%;
+}
 
 .onglet{
 	color:#FFC300;

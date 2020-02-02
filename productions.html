@@ -3,14 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Productions</title>
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript">
-			$('button').on('click', function () {
-			$(this).addClass('clic');
-			});
-		</script>
 	</head>
-	<body style="background-color:#34A853;">
+	<body style="background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;">
 		<div id="header">
 		<div id="menu">
 		<nav>
@@ -22,8 +20,8 @@
 			<li><a class="onglet" href="productions.html">Productions</a></li>
 			
 			<li style="float:right;"><a href="https://www.linkedin.com/in/williamarnoclement/"><img src="img/in.png" alt="Linked In" height="15px"></a></li>
-			<li style="float:right"><a href="mailto:wiyam@icloud.com">@</a></li>
-			<li style="float:right"><a href="contact.html">Contact</a></li>		</ul>
+			<li style="float:right"><a href="mailto:wiyam@icloud.com">Contact</a></li>
+			<li style="float:right;"><a href="https://github.com/Williamarnoclement">Github</a></li>
 		</nav>
 
 		</div>
@@ -32,42 +30,60 @@
 		
 		<div id="content">
 		<div id="entete"><!-- retour en haut de page --></div>
-		<img src="img/jeux.png" alt="Bienvenue dans mon univers...">
+		<img src="img/jeux.png" alt="Productions">
 		<p>Mes projets sont le coeur de mon univers. Chacun s'inscrit dans mon objectif de <b>perpetuel apprentissage.</b></p>
 		<p>
 		Voici un aperçu de mon savoir faire au travers de quelques unes de mes productions. 
 		</p>
+		<h1>Sommaire</h1>
+		<p><a href="#prog">Logiciels et utilitaires</a></p>
+		<p><a href="#jeux">Jeux-vidéo et Multimédia</a></p>
 		<ol>
-		<li>Summiz (générateur d'articles)</li>
+		<div id="prog"><h1>Programmation et informatique</h1></div>
+		<li>Animware (logiciel d'animation 2D) - 2019</li>
+		<p>Lors de ma première année à l'IUT de Fontainebleau, j'ai pu acquerir de nombreuses connaissances en programmation. J'ai donc décider de me lancer  dans la programmation d'un logiciel d'animation 2D. Ecrit en java, celui ci permet de dessiner et d'exporter au format .jpeg une succession d'images dessinées par l'utilisateur.</p>
+		<p>Il incorporera à terme une option d'<a href="https://en.wikipedia.org/wiki/Onion_skinning">onion skinning</a> ainsi que de nombreuses autre features en cours de developpement.</p>
+		<p>Vous pouvez découvrir le code source sur <a href="https://github.com/Williamarnoclement/Animware">Github</a> et suivre le developpement sur son site dédié <a href="http://animware.com/">WWW.ANIMWARE.COM</a> !</p>
+		<img src="img/animware.png" alt="Bienvenue dans mon univers...">
+		<li>Summiz (générateur d'articles) - 2018</li>
 		<p>Créer, concevoir et élaborer. Voici les quelques mots qui définissent pour moi l’entrepreneuriat. Même si pour beaucoup de gens tout part d’une idée, pour ma part, le produit naît avant tout du savoir faire du développeur: la créativité nait de la contrainte.</p>
 		<p>C’est dans ce cadre qu’il y a 5 ans, j’ai entamé le développement d’un <b>méta-moteur de recherche</b>. A la fin de son développement, je me suis rendu compte qu’il manquait quelque chose à mon produit: il ne reflétait pas ma créativité. J’ai donc codé en quelques jours un aspirateur de sites web, qui allait récupérer les liens et absorber le contenu des articles.</p>
 		<p>Quelques temps plus tard, après m’être volontairement éloigné du projet pour prendre du recul sur mon travail, je repense mon code. Le travail ne fait que commencer: je veux créer un outil générateur de contenu journalistique dans le milieu du divertissement. Je connais un peu ce milieu: j’ai lu un livre sur Alexandre Malsch, “Il était une fois Melty”, puis un livre sur l’histoire de Kelkoo. Afin de me plonger un peu plus dans le milieu de l’info-divertissement, je me renseigne sur les différents acteurs en france: Melty, Konbini, NextPlz. Mais un média sort du lot: MinuteBuzz. Ce dernier, disponible uniquement sur les plateformes sociales, a fait le pari du 100% vidéos. Cela me donne à réfléchir.</p>
 		<p>J’ai donc ajouté un <b>système de synthétisation</b> d’articles. L’outil sait désormais créer des articles basiques en récupérant, en synthétisant, puis en modifiant les données des différents sites internet.</p>
-		<p>Le logiciel est désormais disponible en ligne sur le site <a href="http://www.summiz.com/">www.summiz.com</a></p>
+		<p>Le logiciel est désormais disponible en ligne sur <a href="https://github.com/Williamarnoclement/Summiz">Github</a>.</p>
 		<p>Technologies utilisées : PHP, MySQL, CSS</p>
 		<img src="img/summiz.png" alt="Bienvenue dans mon univers...">
-		<li>Yeep (CMS sans base de données)</li>
+		<li>Yeep (CMS sans base de données) - 2015</li>
 		<p>Yeep est un CMS sans base de donnée. Ce système de gestion de contenu se contente d'afficher des billets sous forme de texte et d'images. Les billets de blog sont éditables à l'aide d'une page privée accessible via un mot de passe.</p>
-		<p>Le projet est disponible sur <a href="http://native.chez.com/yeep">Native.chez.com/Yeep</a> et son code source est téléchargeable sur <a href="https://github.com/wiyam">Github.</a></p>
-		<img src="img/cms.png" alt="Bienvenue dans mon univers...">
-		<li>Inferno (Jeu vidéo Unity)</li>
-		<p>L'univers vidéoludique me passionne depuis de nombreuses années. C'est pourquoi je me suis éssayé à la création de jeux vidéo à destination des plus jeunes. Les differents modèles sont modélisés et animés avec <b>Blender</b> et le jeu est créé avec l'aide du moteur de jeux <b>Unity3D</b>. Il s'agit donc d'un jeu de plateforme dont l'objectif est de sauver une princesse.</p>
-		<img src="img/inferno.png" alt="Bienvenue dans mon univers...">
-		<li>The red plane (jeu vidéo Unity)</li>
-		<p>Jeu vidéo en 3D ou l'objectif est d'éviter les nuages. Jeu réalisé avec Blender et Unity.</p>
-		<img src="img/plane.png" alt="Bienvenue dans mon univers...">
+		<p>Le code source du projet est téléchargeable sur <a href="https://github.com/Williamarnoclement/yeep">Github.</a></p>
+		<img src="img/cms.png" alt="yeep">
+		<div id="jeux"><h1>Jeux-vidéo et Multimédia</h1></div>
+		<li>Snake - 2019</li>
+		<p>Dans le cadre de nos études en IUT Informatique, nous avons eu l'opportunité de réaliser un jeu du serpent, dit Snake, à l'aide du langage C et de la librairie graphique mise à disposition par notre établissement. Basée  sur la  librairies X11,  cette  dernière  permet  de  manipuler  une  interface  graphique  à partir d'appels à partir de fonctions préconçues.</p><p>Le code source du projet est téléchargeable sur <a href="https://github.com/Williamarnoclement/Snake">Github</a>.</p>
+		<img src="img/snake.png" alt="image du jeu du serpent">
+		<li>Inferno (Jeu vidéo Unity) - 2017</li>
+		<img src="img/poster.png" alt="poster inferno">
+		<p>L'univers vidéoludique me passionne depuis de nombreuses années. C'est pourquoi je me suis éssayé à la création de jeux vidéo à destination des plus jeunes. Les differents modèles sont modélisés et animés avec <b>Blender</b> et le jeu est créé avec l'aide du moteur de jeux <b>Unity3D</b>. Il s'agit donc d'un jeu de plateforme dont l'objectif est de sauver une princesse. Le jeu est disponible sous <a href="dl/inferno.7z">Windows</a>.</p>
+		<img src="img/inferno.png" alt="inferno en train de courir">
+		<li>Projet BR - 2019</li>
+		<iframe width="100%" height="auto" src="https://www.youtube.com/embed/ixH9E17dkOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>L'un de mes genre de jeux vidéo favoris est le jeu multi-joueur. Rassembler des amis autour d'un jeux vidéo et creer des liens au travers le jeu vidéo est un aspect qui m'attire. C'est pourquoi je développe sur mon temps libre un jeu statégique multijoueur en temps réel avec <b>le moteur de jeu Unity</b> et <b>Blender</b>. Vous pouvez découvrir une ébauche du jeu ci dessus, <a href="https://www.debacle.online/br/podcast.php">écouter les podcast</a> ou visiter <a href="https://www.debacle.online/br/">site web dédié</a>.</p>
+		<img src="img/sept.png" alt="image du jeu BR">
+		<li>DeBACLE.online - 2019</li>
+		<p>Anciennement affilié à mon portfolio, ce blog a pris son indépendance pour devenir une passerelle entre tous les contenus que j’ai créé sur le net depuis 2015. Vous pourrez donc y retrouver <a href="http://www.debacle.online/">mes articles de blog</a>. Le site est développé via un CMS fait-main réalisé en PHP et MySQL.</p>
+		<img src="img/dbcl_logo.png" alt="image du logo de DeBACLE.online">
 		<li>Animations 3D (Portfolio vidéo)</li>
 		<p>Passionné par le rendu et la simulation tri-dimensionnelle, il me paraissait indispensable de découvrir le monde de l'animation. Celui-ci m'a fait découvrir le montage vidéo ainsi que <b>la modélisation</b>, le <b>rigging</b> (squelette du personnage animé), le <b>texturing</b> et l'<b>animation</b>. De plus, je pense qu'il est impossible de vouloir travailler dans le milieu de l'ingénierie, de l'image numérique sans avoir d'experience dans les <b>interfaces graphiques</b> et l'<b>experience utilisateur</b>.</p>
 		<p>Voici quelques animations 3D réalisées en autodidacte via Blender, rendus avec <b>Cycles</b> et <b>Unity</b> (rendus temps réel).</p>
-		<iframe width="100%" height="auto" src="https://www.youtube.com/embed/ZjF-efdmD0w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<p>Les réalisations présentées ci-dessus : <b>Projet Across the stars </b> (court-métrage inspiré du Petit Prince écrit par Antoine de Saint-Exupéry, ou un petit renard voyage dans la galaxie et vit des aventures palpitantes), <b>The red plane</b> (cinématique issue du jeu présenté précedemment), <b>"Brise Lames"</b> (projet de jeu vidéo de stratégie inspiré de WarCraft, Leagues of Legends). 
+		<iframe width="100%" height="auto" src="https://www.youtube.com/embed/zuyd_WNLfY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>Les réalisations présentées ci-dessus : <b>Projet Across the stars </b> (court-métrage inspiré du Petit Prince écrit par Antoine de Saint-Exupéry, ou un petit renard voyage dans la galaxie et vit des aventures palpitantes), <b>The red plane</b>, <b>Brise Lames</b> (projet de jeu vidéo de stratégie inspiré de WarCraft, Leagues of Legends, ancienne version de "Projet BR"), <b>Inferno</b> (jeu vidéo présenté précedemment). 
 		</p>
 		<img src="img/foot.png" alt="Bienvenue dans mon univers...">
 		</ol>
 		</div>
 		<div class="footer">
 		<div id="contenu_fin">
-		<p>William-Arno CLEMENT | 2019</p><img src="img/upec.jpg" alt="logo u-pec" height="30px"><a href="#entete"><img src="img/fleche.png" alt="hautDePage"></a>
+		<p>William-Arno CLEMENT | 2020</p><img src="img/upec.jpg" alt="logo u-pec" height="30px"><a href="#entete"><img src="img/fleche.png" alt="hautDePage"></a>
 		</div>
 		</div>
 		

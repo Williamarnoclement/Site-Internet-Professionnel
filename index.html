@@ -3,9 +3,45 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>William-Arno CLEMENT</title>
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="css/style.css" />
+		
+		<script type="text/javascript">
+			var slider = 0;
+			function turn(){
+			
+			
+			
+				if (slider == 0) {
+
+					slider = 1;
+					document.getElementsByClassName("body_one")[0].style.background = "url('img/background_3.png')";
+					document.getElementsByClassName("body_one")[0].style.backgroundPosition = "center top";
+					document.getElementsByClassName("body_one")[0].style.backgroundSize = "cover";
+
+				}
+				else if (slider == 1){
+
+					slider = 2;
+					document.getElementsByClassName("body_one")[0].style.background = "url('img/background_2.png')";
+					document.getElementsByClassName("body_one")[0].style.backgroundPosition = "center top";
+					document.getElementsByClassName("body_one")[0].style.backgroundSize = "cover";
+
+				}
+				else if (slider == 2){
+
+					slider = 0;
+					document.getElementsByClassName("body_one")[0].style.background = "url('img/background_1.png')";
+					document.getElementsByClassName("body_one")[0].style.backgroundPosition = "center top";
+					document.getElementsByClassName("body_one")[0].style.backgroundSize = "cover";
+
+				}
+
+			}
+
+		</script>
 	</head>
-	<body style="background: url(img/background_1.png) no-repeat; ">
+	<body class="body_one">
 		<div id="header">
 		<div id="menu">
 		<nav>
@@ -15,17 +51,16 @@
 			<li><a href="cv.html">CV</a></li>
 			<li><a href="productions.html">Productions</a></li>
 			
-			
 			<li style="float:right;"><a href="https://www.linkedin.com/in/williamarnoclement/"><img src="img/in.png" alt="Linked In" height="15px"></a></li>
-			<li style="float:right"><a href="mailto:wiyam@icloud.com">@</a></li>
-			<li style="float:right"><a href="contact.html">Contact</a></li>
+			<li style="float:right"><a href="mailto:wiyam@icloud.com">Contact</a></li>
+			<li style="float:right;"><a href="https://github.com/Williamarnoclement">Github</a></li>
 		</ul>
 		</nav>
 		</div>
 		</div>
 		<div id="hello_world">
-		<center><h1>William-Arno CLEMENT</h1><p>
-		<h2>Etudiant en informatique <b>cherche stage dans la simulation 3D</b></h2>
+		<center><h1><span>William-Arno CLEMENT</span></h1><p>
+		<h2><span>Etudiant en informatique <b>cherche stage en alternance dans le développement web</b></span></h2>
 		</center>
 		</div>
 		
@@ -33,7 +68,7 @@
 		
 		<div class="footer">
 		<div id="contenu_fin">
-		<p>William-Arno CLEMENT | 2019</p><img src="img/upec.jpg" alt="logo u-pec" height="30px">
+		<p>William-Arno CLEMENT | 2020</p><img src="img/upec.jpg" alt="logo u-pec"><img src="img/off.png" onclick="turn(this)">
 		</div>
 		</div>
 	</body>
